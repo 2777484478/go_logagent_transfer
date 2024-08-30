@@ -1,0 +1,100 @@
+[2024-07-26 10:10:07,803] WARN Exception causing close of session 0x1000638e08d0000: Զ      ǿ ȹر   һ     е    ӡ  (org.apache.zookeeper.server.NIOServerCnxn)
+[2024-07-26 10:10:07,846] INFO Closed socket connection for client /0:0:0:0:0:0:0:1:6523 which had sessionid 0x1000638e08d0000 (org.apache.zookeeper.server.NIOServerCnxn)
+[2024-07-26 10:10:07,803] WARN Exception causing close of session 0x1000638e08d0000: Զ      ǿ ȹر   һ     е    ӡ  (org.apache.zookeeper.server.NIOServerCnxn)
+[2024-07-26 10:10:07,846] INFO Closed socket connection for client /0:0:0:0:0:0:0:1:6523 which had sessionid 0x1000638e08d0000 (org.apache.zookeeper.server.NIOServerCnxn)
+如果结果中的值是utf8，则表格不支持utf8mb4字符集。如果结果是utf8mb4，则表格已经支持使用这个字符集了。如果结果为空，需要在mysql命令行或客户端中执行以下语句：
+2024-07-29 13:21:51.348 DEBUG 1 --- [       task-998] escloud.issuemapper.selectIssueStatus    : ==> Parameters: 3120125(Long)
+2024-07-29 13:21:51.351 DEBUG 1 --- [       task-998] escloud.issuemapper.selectIssueStatus    : <==      Total: 1
+2024-07-29 13:21:51.374 DEBUG 1 --- [       task-998] e.issuemapper.selectIssueByIssueId       : ==>  Preparing: SELECT a.IssueId,ifnull(a.CrmId, '') as CrmId,a.ServiceCode, IF(customer.CustomerName IS NULL OR TRIM(customer.CustomerName) = '', serae.AE002, customer.CustomerName) as CustomerName, a.ProductCode,a.ProductVersion,mp.ProductCategory productCategory, a.UserId,ifnull(h.name,'') submitName, a.CcUser,a.UserContactId,a.IssueDescription,a.IssueStack,a.SubmitWay, case when a.IssueStatus IN ( 'N','2','3','4','11','12','22','O','VN','Q','R') then 'N' when a.IssueStatus IN ('Y','7','10','A') then 'Y' ELSE IssueStatus END IssueStatus, a.SubmitTime, ifnull(d.fullname, e.ServiceStaff) as ServiceStaff,a.ServiceDepartment, mcs.fullname as SupportStaff, mcs.departmentcode as SupportDepartment, f.`Name` as userContact_name, f.email as userContact_email, f.phone01 as userContact_phone01, f.phone02 as userContact_phone02, f.qq as userContact_qq, a.UserContactId as userContact_id, f.userId as userContact_userId, a.RequestPatchId, a.ProgramCode,a.ProgramVersion, a.IssueType, a.SyncStatus,ifnull(a.ServiceId, '') as ServiceI^Cd, a.planDownloadTime, a.planUpdateTime, a.serviceRegion as serviceRegion,a.machineRegion as machineRegion,a.site as site,a.environment as environment, case when a.IssueStatus IN ('C','N','2','3','4') then 1 ELSE 0 END isDirectClosedShow FROM issue a LEFT JOIN mars_userpersonalinfo b on b.userid = a.ServiceId LEFT JOIN mars_customerservicesatff d on d.workno = b.workno left join mars_userpersonalinfo h on h.userid = a.UserId LEFT JOIN mars_customerservice e on e.CustomerServiceCode = a.ServiceCode and (ifnull(a.ProductCode,'') = '' or e.ProductCode = a.ProductCode) left join mars_customer customer on customer.CustomerServiceCode = a.ServiceCode LEFT JOIN serae on a.ServiceCode = serae.AE001 LEFT JOIN user_contacts f on f.Id = a.UserContactId LEFT JOIN mars_product mp ON mp.ProductCode = a.ProductCode LEFT JOIN mars_userpersonalinfo mu on mu.userid = a.SupportId LEFT JOIN mars_customerservicesatff mcs on mcs.workno = mu.workno WHERE a.IssueId = ? LIMIT 0,1
+2024-07-29 13:21:51.375 DEBUG 1 --- [       task-998] e.issuemapper.selectIssueByIssueId       : ==> Parameters: 3120125(String)
+2024-07-29 13:21:51.378 DEBUG 1 --- [       task-998] e.issuemapper.selectNewIssueSourceMap    : ====>  Preparing: SELECT *,p.productCategory,s.ErpSystemName erpSystemName FROM issue_source_map map left join mars_product p on p.productCode = map.productCode left join erpsystemcode s on s.ProductCode = map.productCode and s.ErpSystemCode = map.erpSystemCode where map.issueId=? ORDER BY map.id DESC limit 1
+2024-07-29 13:21:51.379 DEBUG 1 --- [       task-998] e.issuemapper.selectNewIssueSourceMap    : ====> Parameters: 3120125(Long)
+2024-07-29 13:21:51.381 DEBUG 1 --- [       task-998] e.issuemapper.selectNewIssueSourceMap    : <====      Total: 0
+2024-07-29 13:21:51.382 DEBUG 1 --- [  
+2024-07-29 13:21:51.381 DEBUG 1 --- [       task-998] e.issuemapper.selectNewIssueSourceMap    : <====      Total: 0
+2024-07-29 13:21:51.381 DEBUG 1 --- [       task-998] e.issuemapper.selectNewIssueSourceMap    : <====      Total: 0
+2024-07-29 13:21:51.381 DEBUG 1 --- [       task-998] e.issuemapper.selectNewIssueSourceMap    : <====      Total: 0
+2024-07-29 13:21:51.381 DEBUG 1 --- [       task-998] e.issuemapper.selectNewIssueSourceMap    : <====      Total: 0
+2024-07-29 13:21:51.381 DEBUG 1 --- [       task-998] e.issuemapper.selectNewIssueSourceMap    : <====      Total: 0
+2024-07-29 13:21:51.381 DEBUG 1 --- [       task-998] e.issuemapper.selectNewIssueSourceMap    : <====      Total: 0
+2024-07-29 13:21:51.381 DEBUG 1 --- [       task-998] e.issuemapper.selectNewIssueSourceMap    : <====      Total: 0
+2024-07-29 13:21:51.381 DEBUG 1 --- [       task-998] e.issuemapper.selectNewIssueSourceMap    : <====      Total: 0
+2024-07-29 13:21:51.381 DEBUG 1 --- [       task-998] e.issuemapper.selectNewIssueSourceMap    : <====      Total: 0
+2024-07-29 13:21:51.381 DEBUG 1 --- [       task-998] e.issuemapper.selectNewIssueSourceMap    : <====      Total: 0
+D:\kafka\bin\windows
+12
+34D:\kafka\bin\windows2024-07-29 13:21:51.381 DEBUG 1 --- [       task-998] e.issuemapper.selectNewIssueSourceMap    : <====      Total: 0
+2024-07-29 13:21:51.381 DEBUG 1 --- [       task-998] e.issuemapper.selectNewIssueSourceMap    : <====      Total: 0package main
+
+import (
+	"fmt"
+
+	"github.com/IBM/sarama"
+)
+
+// kafka consumer
+
+func main() {
+	consumer, err := sarama.NewConsumer([]string{"127.0.0.1:9092"}, nil)
+	if err != nil {
+		fmt.Printf("fail to start consumer, err:%v\n", err)
+		return
+	}
+	partitionList, err := consumer.Partitions("web_log") // 根据topic取到所有的分区
+	if err != nil {
+		fmt.Printf("fail to get list of partition:err%v\n", err)
+		return
+	}
+	fmt.Println(partitionList)
+	for partition := range partitionList { // 遍历所有的分区
+		// 针对每个分区创建一个对应的分区消费者
+		pc, err := consumer.ConsumePartition("web_log", int32(partition), sarama.OffsetNewest)
+		if err != nil {
+			fmt.Printf("failed to start consumer for partition %d,err:%v\n", partition, err)
+			return
+		}
+		defer pc.AsyncClose()
+		// 异步从每个分区消费信息
+		go func(sarama.PartitionConsumer) {
+			for msg := range pc.Messages() {
+				fmt.Printf("Partition:%d Offset:%d Key:%v Value:%v", msg.Partition, msg.Offset, msg.Key, msg.Value)
+			}
+		}(pc)
+	}
+}
+为什么不行？
+我操
+
+
+
+123
+dfdffsfsf发士大夫士大夫我几天内不吃饭goodmr
+2024-07-29 13:21:51.375 DEBUG 1 --- [       task-998] e.issuemapper.selectIssueByIssueId       : ==> Parameters: 3120125(String)
+2024-07-29 13:21:51.378 DEBUG 1 --- [       task-998] e.issuemapper.selectNewIssueSourceMap    : ====>  Preparing: SELECT *,p.productCategory,s.ErpSystemName erpSystemName FROM issue_source_map map left join mars_product p on p.productCode = map.productCode left join erpsystemcode s on s.ProductCode = map.productCode and s.ErpSystemCode = map.erpSystemCode where map.issueId=? ORDER BY map.id DESC limit 12024-07-29 13:21:51.375 DEBUG 1 --- [       task-998] e.issuemapper.selectIssueByIssueId       : ==> Parameters: 3120125(String)
+2024-07-29 13:21:51.378 DEBUG 1 --- [       task-998] e.issuemapper.selectNewIssueSourceMap    : ====>  Preparing: SELECT *,p.productCategory,s.ErpSystemName erpSystemName FROM issue_source_map map left join mars_product p on p.productCode = map.productCode left join erpsystemcode s on s.ProductCode = map.productCode and s.ErpSystemCode = map.erpSystemCode where map.issueId=? ORDER BY map.id DESC limit 1
+where
+where
+where
+wherewherewhere2024-07-29 13:21:51.378 DEBUG 1 --- [       task-998] e.issuemapper.selectNewIssueSourceMap    : ====>  Preparing: SELECT *,p.productCategory,s.ErpSystemName erpSystemName FROM issue_source_map map left join mars_product p on p.productCode = map.productCode left join erpsystemcode s on s.ProductCode = map.productCode and s.ErpSystemCode = map.erpSystemCode where map.issueId=? ORDER BY map.id DESC limit 1
+2024-07-29 13:21:51.378 DEBUG 1 --- [       task-998] e.issuemapper.selectNewIssueSourceMap    : ====>  Preparing: SELECT *,p.productCategory,s.ErpSystemName erpSystemName FROM issue_source_map map left join mars_product p on p.productCode = map.productCode left join erpsystemcode s on s.ProductCode = map.productCode and s.ErpSystemCode = map.erpSystemCode where map.issueId=? ORDER BY map.id DESC limit 12024-07-29 13:21:51.378 DEBUG 1 --- [       task-998] e.issuemapper.selectNewIssueSourceMap    : ====>  Preparing: SELECT *,p.productCategory,s.ErpSystemName erpSystemName FROM issue_source_map map left join mars_product p on p.productCode = map.productCode left join erpsystemcode s on s.ProductCode = map.productCode and s.ErpSystemCode = map.erpSystemCode where map.issueId=? ORDER BY map.id DESC limit 12345
+egfdg
+123现场v徐
+发士大夫
+对方是否
+issueservice
+userservice
+toolboxservice
+kbservice
+xxljob
+mtservice
+logservice
+evaservice
+userv2
+basicdatasyncservice
+es-easytalk
+SCP_Web_V2
+
+aioitms
+dcdpitms
+dcdpdatastorageservice
+es-dcp

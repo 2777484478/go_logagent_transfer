@@ -1,0 +1,32 @@
+flush all redis
+1:M 10 Jul 2023 08:21:45.569 # Server initialized
+1:M 10 Jul 2023 08:21:45.595 * Loading RDB produced by version 6.2.4
+1:M 10 Jul 2023 08:21:45.595 * RDB age 2254202 seconds
+1:M 10 Jul 2023 08:21:45.595 * RDB memory usage when created 1276.78 Mb
+1:M 10 Jul 2023 08:22:04.768 * DB loaded from disk: 19.199 seconds
+1:M 10 Jul 2023 08:22:04.768 * Ready to accept connections
+1:M 10 Jul 2023 08:22:04.768 * Ready to accept connections
+1:M 10 Jul 2023 08:22:04.768 * Ready to accept connections
+1:M 10 Jul 2023 08:22:04.768 * Ready to accept connections
+1:M 10 Jul 2023 08:21:45.569 # Server initialized
+1:M 10 Jul 2023 08:21:45.595 * Loading RDB produced by version 6.2.4
+1:M 10 Jul 2023 08:21:45.595 * RDB age 2254202 seconds
+1:M 10 Jul 2023 08:21:45.595 * RDB memory usage when created 1276.78 Mb
+1:M 10 Jul 2023 08:22:04.768 * DB loaded from disk: 19.199 seconds
+1:M 10 Jul 2023 08:22:04.768 * Ready to accept connections
+1:M 10 Jul 2023 08:22:04.768 * Ready to accept connections
+1:M 10 Jul 2023 08:22:04.768 * Ready to accept connections
+1:M 10 Jul 2023 08:22:04.768 * Ready to accept connections
+1:M 10 Jul 2023 08:21:45.569 # Server initialized
+1:M 10 Jul 2023 08:21:45.595 * Loading RDB produced by version 6.2.4
+1:M 10 Jul 2023 08:21:45.595 * RDB age 2254202 seconds
+1:M 10 Jul 2023 08:21:45.595 * RDB memory usage when created 1276.78 Mb
+1:M 10 Jul 2023 08:22:04.768 * DB loaded from disk: 19.199 seconds
+1:M 10 Jul 2023 08:22:04.768 * Ready to accept connections
+1:M 10 Jul 2023 08:22:04.768 * Ready to accept connections
+1:M 10 Jul 2023 08:22:04.768 * Ready to accept connections
+1:M 10 Jul 2023 08:22:04.768 * Ready to accept connections
+1:M 10 Jul 2023 08:22:04.768 * Ready to accept connections1
+1:M 10 Jul 2023 08:22:04.768 * Ready to accept connections2
+1:M 10 Jul 2023 08:22:04.768 * Ready to accept connections3
+
